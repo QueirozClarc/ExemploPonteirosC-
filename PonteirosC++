@@ -1,0 +1,44 @@
+
+#include <iostream>
+
+int main () {
+	// Crie uma variável de nome Numero do Tipo inteiro e valor inicial igual a 234;
+
+  int Numero {234};
+	
+  // Crie um ponteiro de nome Ponteiro capaz de apontar para um variável do tipo inteiro.
+  
+  int *Ponteiro;
+ 
+ // Troque o valor de Numero para 1456 usando Ponteiro
+	
+  Ponteiro = &Numero;
+	*Ponteiro = 1456;
+
+ // Coloque o valor de Numero na tela usando Ponteiro
+	
+  std::cout <<"O numero constante em Numero é:" << *Ponteiro << std::endl;
+ 
+ // Mostre o endereço da memória RAM em que estão carregados, alocados as variáveis Ponteiro e Numero
+  
+  std::cout <<"O valor da memoria RAM para Numero é:" << &Numero << std::endl;
+	std::cout <<"O valor da memoria RAM para Ponteiro é:" << &Ponteiro << std::endl;
+	
+  // Crie um outro ponteiro de nome OutroPtr
+	
+  int *OutroPtr;
+	
+  // Faça OutroPtr apontar para a mesma variável que ptr aponta. 
+  
+  OutroPtr = &Numero;
+  
+  // Usando Ponteiro some 200 ao valor contido em Numero
+  
+	*Ponteiro = Numero + 200;
+	
+  // Usando OutroPtr coloque na tela o valor de Numero
+  
+	std::cout <<"O numero constante em Numero é:" << *OutroPtr << std::endl;
+
+	return 0;
+}
